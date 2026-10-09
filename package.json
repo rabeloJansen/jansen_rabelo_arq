@@ -1,0 +1,14 @@
+{
+  "name": "jansen-rabelo-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check": "node --check src/scripts/app.js && node --check src/scripts/contact-config.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
