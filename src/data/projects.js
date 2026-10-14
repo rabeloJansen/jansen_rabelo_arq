@@ -1,0 +1,142 @@
+export const PROJECTS = Object.freeze([
+  {
+    "id": "databim",
+    "name": "dataBIM",
+    "category": "BIM e Dados",
+    "filter": "bim",
+    "status": "Em desenvolvimento",
+    "icon": "assets/images/projects/databim/databim-icon.png",
+    "page": "projects/databim.html",
+    "accent": "cyan",
+    "summary": "Plataforma desktop para extrair, verificar, organizar e analisar informações BIM, conectando modelos IFC, regras de qualidade, revisões e dashboards.",
+    "lead": "Governança de dados BIM do modelo ao indicador.",
+    "problem": "Dados de modelos IFC costumam chegar fragmentados entre arquivos, planilhas e revisões, dificultando a verificação de parâmetros, a rastreabilidade e a leitura consolidada do avanço do projeto.",
+    "solution": "O dataBIM estabelece um fluxo integrado que extrai informações do IFC, estrutura os dados em Excel, aplica regras de qualidade e avanço, registra revisões em SQLite e consolida os resultados em dashboards.",
+    "features": [
+      "Extração de atributos e parâmetros de modelos IFC",
+      "Exportação estruturada para Excel sem sobrescrever a origem",
+      "Análise de preenchimento, consistência e conteúdo dos parâmetros",
+      "Regras de avanço orientadas por matrizes de projeto",
+      "Relatórios de conformidade e itens esperados",
+      "Persistência local de modelos, elementos e revisões em SQLite",
+      "Comparação de revisões e histórico de alterações",
+      "Dashboards com filtros por etapa, disciplina, modelo, revisão e status"
+    ],
+    "architecture": "Monólito modular em Python, com limites explícitos entre aplicação, domínio, infraestrutura e interface desktop. Os fluxos de IFC, Excel, matrizes, banco de dados e dashboards permanecem separados por responsabilidades.",
+    "innovation": "Mais do que converter IFC para planilha, o produto mantém um encadeamento verificável entre modelo, requisitos, resultados de análise, histórico e indicadores.",
+    "tech": [
+      "Python",
+      "PyQt6",
+      "IfcOpenShell",
+      "SQLite",
+      "pandas",
+      "openpyxl"
+    ]
+  },
+  {
+    "id": "echoiq",
+    "name": "EchoIQ",
+    "category": "Inteligência Artificial",
+    "filter": "ai",
+    "status": "Em desenvolvimento",
+    "icon": "assets/images/projects/echoiq/echoiq-icon.png",
+    "page": "projects/echoiq.html",
+    "accent": "violet",
+    "summary": "Aplicativo para captura e transcrição de reuniões, com processamento local, análise estruturada por IA e geração auditável de resumos e atas.",
+    "lead": "Da conversa ao registro técnico auditável.",
+    "problem": "O conteúdo de reuniões técnicas frequentemente se perde entre gravações, anotações incompletas e documentos produzidos manualmente depois do encontro.",
+    "solution": "O EchoIQ captura microfone e áudio do sistema, produz transcrições em tempo real e finais, executa análises locais ou pelo Google Gemini e organiza cada resultado em uma sessão rastreável.",
+    "features": [
+      "Captura simultânea do microfone e do áudio do sistema",
+      "Transcrição em tempo real com Sherpa-ONNX",
+      "Transcrição final refinada com Faster-Whisper",
+      "Análise local com Qwen por meio do llama.cpp",
+      "Análise comercial opcional pelo Google Gemini",
+      "Geração de resumo técnico e ata de reunião",
+      "Manifesto auditável com estados, diagnósticos e artefatos",
+      "Instalação separada do aplicativo, modelos e runtimes de IA"
+    ],
+    "architecture": "Monólito modular com domínio independente de interface, sistema de arquivos, APIs e motores de IA. Provedores, transcrição, renderização, segurança e sessões são conectados por contratos explícitos.",
+    "innovation": "A IA faz parte de um pipeline controlado. Cada sessão registra o que foi solicitado, executado e produzido, preservando rastreabilidade e revisão humana.",
+    "tech": [
+      "Python",
+      "PyQt6",
+      "Faster-Whisper",
+      "Sherpa-ONNX",
+      "Qwen",
+      "llama.cpp",
+      "Google Gemini",
+      "CUDA"
+    ]
+  },
+  {
+    "id": "fxone-studio",
+    "name": "FXone Studio",
+    "category": "Áudio e DSP",
+    "filter": "audio",
+    "status": "Em desenvolvimento",
+    "icon": "assets/images/projects/fxone-studio/fxone-icon.png",
+    "page": "projects/fxone-studio.html",
+    "accent": "red",
+    "summary": "Ambiente desktop para criação de rigs virtuais, organização visual de equipamentos e processamento de áudio em tempo real.",
+    "lead": "Equipamentos virtuais em uma cadeia de áudio extensível.",
+    "problem": "Soluções de áudio precisam equilibrar uma experiência visual intuitiva com processamento em tempo real, persistência de projetos e expansão segura do catálogo de equipamentos.",
+    "solution": "O FXone Studio organiza pedais, amplificadores, caixas e racks como equipamentos manipuláveis, enquanto módulos DSP independentes executam o processamento sem acoplar cada modelo ao núcleo do aplicativo.",
+    "features": [
+      "Criação, abertura e persistência versionada de projetos",
+      "Biblioteca visual de equipamentos",
+      "Composição de rigs por arrastar e soltar",
+      "Categorias para pedais, amplificadores, caixas e racks",
+      "Parâmetros definidos por manifestos de equipamento",
+      "Seleção de dispositivos e medidores de áudio",
+      "Cadeia de processamento em tempo real",
+      "Módulos DSP independentes e extensíveis",
+      "Fundação preparada para gravação e novos equipamentos"
+    ],
+    "architecture": "Aplicação C++20 baseada em JUCE e CMake, organizada como monólito modular. Bundles reúnem manifesto, arte, presets e binário DSP, enquanto a cadeia de áudio em tempo real utiliza snapshots preparados fora do callback crítico.",
+    "innovation": "Novos equipamentos podem evoluir como bundles autônomos. O host permanece genérico e a thread de áudio não depende de interface, arquivos ou renderização.",
+    "tech": [
+      "C++20",
+      "JUCE",
+      "CMake",
+      "DSP",
+      "MSVC",
+      "JSON"
+    ]
+  },
+  {
+    "id": "vstick",
+    "name": "vStick",
+    "category": "Simulação",
+    "filter": "simulation",
+    "status": "Versão 1.0.0",
+    "icon": "assets/images/projects/vstick/vstick-icon.png",
+    "page": "projects/vstick.html",
+    "accent": "purple",
+    "summary": "Aplicativo que transforma o movimento do mouse em dois eixos analógicos de um joystick virtual para simuladores de voo.",
+    "lead": "Controle analógico acessível a partir do mouse.",
+    "problem": "O mouse oferece precisão e ampla disponibilidade, mas simuladores esperam eixos analógicos contínuos fornecidos por um dispositivo de joystick reconhecido pelo Windows.",
+    "solution": "O vStick converte a posição do mouse em comandos X e Y, utiliza o vJoy como dispositivo virtual e acrescenta controles de ativação, suavização, inversão e retorno seguro à última posição.",
+    "features": [
+      "Controle dos eixos X e Y pela posição do mouse",
+      "Tecla global para ativar ou desativar o controle",
+      "Seleção do monitor usado como área de comando",
+      "Overlay de centro, estado e posição atual",
+      "Exibição opcional dos valores normalizados dos eixos",
+      "Suavização configurável do movimento",
+      "Restauração da última posição comandada",
+      "Inversão independente dos eixos",
+      "Configuração persistente, logs e diagnóstico",
+      "Empacotamento como executável para Windows"
+    ],
+    "architecture": "Aplicativo desktop Windows em Python e PyQt6, estruturado como monólito modular. A apresentação, as regras de mapeamento, a configuração e os adaptadores de mouse, monitor, teclado e vJoy possuem responsabilidades separadas e testáveis.",
+    "innovation": "O produto combina o mapeamento do mouse com comportamento operacional seguro, incluindo estado global, suavização, múltiplos monitores, persistência e diagnóstico.",
+    "tech": [
+      "Python",
+      "PyQt6",
+      "vJoy",
+      "pynput",
+      "PyInstaller"
+    ]
+  }
+]);
