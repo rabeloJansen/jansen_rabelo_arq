@@ -1,1 +1,122 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Plataforma desktop para extrair, verificar, organizar e analisar informações BIM, conectando modelos IFC, regras de qualidade, revisões e dashboards."><meta name="theme-color" content="#0b1018"><title>dataBIM | Biblioteca de Jansen Rabelo</title><link rel="icon" type="image/png" href="../assets/icons/favicon.png"><link rel="stylesheet" href="../src/styles/main.css"><link rel="stylesheet" href="../src/styles/update-1.1.0.css"><link rel="stylesheet" href="../src/styles/library.css"><script type="module" src="../src/scripts/app.js"></script></head><body data-page="project"><header class="site-header"><a class="brand" href="../index.html"><img src="../assets/icons/favicon.png" alt=""><strong>Jansen Rabelo</strong></a><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu"><span class="sr-only">Abrir menu</span>☰</button><nav id="menu" class="site-nav" aria-label="Navegação principal"><a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a><a href="../professional.html">Profissional</a><a class="active" href="../library.html">Biblioteca</a><a href="../contact.html">Contato</a></nav></header><main id="conteudo" class="project-page project-cyan"><section class="project-hero"><div class="project-hero-copy reveal"><a class="back-link" href="../library.html">← Voltar à Biblioteca</a><p class="eyebrow">BIM E DADOS</p><h1>dataBIM</h1><p class="project-lead">Governança de dados BIM do modelo ao indicador.</p><div class="tech-list large"><span>Python</span><span>PyQt6</span><span>IfcOpenShell</span><span>SQLite</span><span>pandas</span><span>openpyxl</span></div><span class="project-status">Em desenvolvimento</span></div><div class="project-hero-icon reveal"><img src="../assets/images/projects/databim/databim-icon.png" alt="Ícone do projeto dataBIM"></div></section><section class="project-story"><article class="story-block reveal"><p class="eyebrow">O DESAFIO</p><h2>Contexto</h2><p>Dados de modelos IFC costumam chegar fragmentados entre arquivos, planilhas e revisões, dificultando a verificação de parâmetros, a rastreabilidade e a leitura consolidada do avanço do projeto.</p></article><article class="story-block reveal"><p class="eyebrow">A SOLUÇÃO</p><h2>Produto</h2><p>O dataBIM estabelece um fluxo integrado que extrai informações do IFC, estrutura os dados em Excel, aplica regras de qualidade e avanço, registra revisões em SQLite e consolida os resultados em dashboards.</p></article></section><section class="project-capabilities reveal"><div class="section-heading"><p class="eyebrow">PRINCIPAIS CAPACIDADES</p><h2>O que o produto reúne</h2></div><ul><li>Extração de atributos e parâmetros de modelos IFC</li><li>Exportação estruturada para Excel sem sobrescrever a origem</li><li>Análise de preenchimento, consistência e conteúdo dos parâmetros</li><li>Regras de avanço orientadas por matrizes de projeto</li><li>Relatórios de conformidade e itens esperados</li><li>Persistência local de modelos, elementos e revisões em SQLite</li><li>Comparação de revisões e histórico de alterações</li><li>Dashboards com filtros por etapa, disciplina, modelo, revisão e status</li></ul></section><section class="project-technical"><article class="technical-card reveal"><p class="eyebrow">ARQUITETURA</p><h2>Construído para evoluir</h2><p>Monólito modular em Python, com limites explícitos entre aplicação, domínio, infraestrutura e interface desktop. Os fluxos de IFC, Excel, matrizes, banco de dados e dashboards permanecem separados por responsabilidades.</p></article><article class="technical-card accent-card reveal"><p class="eyebrow">DIFERENCIAL</p><h2>Decisão de produto</h2><p>Mais do que converter IFC para planilha, o produto mantém um encadeamento verificável entre modelo, requisitos, resultados de análise, histórico e indicadores.</p></article></section><section class="project-gallery reveal"><p class="eyebrow">GALERIA</p><div class="gallery-placeholder"><span>Capturas da interface serão adicionadas aqui.</span></div></section><nav class="project-pagination" aria-label="Outros projetos"><a href="vstick.html"><small>PROJETO ANTERIOR</small><strong>← vStick</strong></a><a href="echoiq.html"><small>PRÓXIMO PROJETO</small><strong>EchoIQ →</strong></a></nav></main><footer class="site-footer static"><span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span></footer></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Plataforma desktop para extrair, verificar, organizar e analisar informações BIM, conectando modelos IFC, regras de qualidade, revisões e dashboards."
+    />
+    <meta name="theme-color" content="#0b1018" />
+    <title>dataBIM | Biblioteca de Jansen Rabelo</title>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="../src/styles/update-1.1.0.css" />
+    <link rel="stylesheet" href="../src/styles/library.css" />
+    <script type="module" src="../src/scripts/app.js"></script>
+  </head>
+  <body data-page="project">
+    <header class="site-header">
+      <a class="brand" href="../index.html"
+        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+      ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menu</span>☰
+      </button>
+      <nav id="menu" class="site-nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a
+        ><a href="../professional.html">Profissional</a
+        ><a class="active" href="../library.html">Biblioteca</a
+        ><a href="../contact.html">Contato</a>
+      </nav>
+    </header>
+    <main id="conteudo" class="project-page project-cyan">
+      <section class="project-hero">
+        <div class="project-hero-copy reveal">
+          <a class="back-link" href="../library.html">← Voltar à Biblioteca</a>
+          <p class="eyebrow">BIM E DADOS</p>
+          <h1>dataBIM</h1>
+          <p class="project-lead">Governança de dados BIM do modelo ao indicador.</p>
+          <div class="tech-list large">
+            <span>Python</span><span>PyQt6</span><span>IfcOpenShell</span><span>SQLite</span
+            ><span>pandas</span><span>openpyxl</span>
+          </div>
+          <span class="project-status">Em desenvolvimento</span>
+        </div>
+        <div class="project-hero-icon reveal">
+          <img
+            src="../assets/images/projects/databim/databim-icon.png"
+            alt="Ícone do projeto dataBIM"
+          />
+        </div>
+      </section>
+      <section class="project-story">
+        <article class="story-block reveal">
+          <p class="eyebrow">O DESAFIO</p>
+          <h2>Contexto</h2>
+          <p>
+            Dados de modelos IFC costumam chegar fragmentados entre arquivos, planilhas e revisões,
+            dificultando a verificação de parâmetros, a rastreabilidade e a leitura consolidada do
+            avanço do projeto.
+          </p>
+        </article>
+        <article class="story-block reveal">
+          <p class="eyebrow">A SOLUÇÃO</p>
+          <h2>Produto</h2>
+          <p>
+            O dataBIM estabelece um fluxo integrado que extrai informações do IFC, estrutura os
+            dados em Excel, aplica regras de qualidade e avanço, registra revisões em SQLite e
+            consolida os resultados em dashboards.
+          </p>
+        </article>
+      </section>
+      <section class="project-capabilities reveal">
+        <div class="section-heading">
+          <p class="eyebrow">PRINCIPAIS CAPACIDADES</p>
+          <h2>O que o produto reúne</h2>
+        </div>
+        <ul>
+          <li>Extração de atributos e parâmetros de modelos IFC</li>
+          <li>Exportação estruturada para Excel sem sobrescrever a origem</li>
+          <li>Análise de preenchimento, consistência e conteúdo dos parâmetros</li>
+          <li>Regras de avanço orientadas por matrizes de projeto</li>
+          <li>Relatórios de conformidade e itens esperados</li>
+          <li>Persistência local de modelos, elementos e revisões em SQLite</li>
+          <li>Comparação de revisões e histórico de alterações</li>
+          <li>Dashboards com filtros por etapa, disciplina, modelo, revisão e status</li>
+        </ul>
+      </section>
+      <section class="project-technical">
+        <article class="technical-card reveal">
+          <p class="eyebrow">ARQUITETURA</p>
+          <h2>Construído para evoluir</h2>
+          <p>
+            Monólito modular em Python, com limites explícitos entre aplicação, domínio,
+            infraestrutura e interface desktop. Os fluxos de IFC, Excel, matrizes, banco de dados e
+            dashboards permanecem separados por responsabilidades.
+          </p>
+        </article>
+        <article class="technical-card accent-card reveal">
+          <p class="eyebrow">DIFERENCIAL</p>
+          <h2>Decisão de produto</h2>
+          <p>
+            Mais do que converter IFC para planilha, o produto mantém um encadeamento verificável
+            entre modelo, requisitos, resultados de análise, histórico e indicadores.
+          </p>
+        </article>
+      </section>
+      <section class="project-gallery reveal">
+        <p class="eyebrow">GALERIA</p>
+        <div class="gallery-placeholder">
+          <span>Capturas da interface serão adicionadas aqui.</span>
+        </div>
+      </section>
+      <nav class="project-pagination" aria-label="Outros projetos">
+        <a href="vstick.html"><small>PROJETO ANTERIOR</small><strong>← vStick</strong></a
+        ><a href="echoiq.html"><small>PRÓXIMO PROJETO</small><strong>EchoIQ →</strong></a>
+      </nav>
+    </main>
+    <footer class="site-footer static">
+      <span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span>
+    </footer>
+  </body>
+</html>

@@ -1,1 +1,122 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ambiente desktop para criação de rigs virtuais, organização visual de equipamentos e processamento de áudio em tempo real."><meta name="theme-color" content="#0b1018"><title>FXone Studio | Biblioteca de Jansen Rabelo</title><link rel="icon" type="image/png" href="../assets/icons/favicon.png"><link rel="stylesheet" href="../src/styles/main.css"><link rel="stylesheet" href="../src/styles/update-1.1.0.css"><link rel="stylesheet" href="../src/styles/library.css"><script type="module" src="../src/scripts/app.js"></script></head><body data-page="project"><header class="site-header"><a class="brand" href="../index.html"><img src="../assets/icons/favicon.png" alt=""><strong>Jansen Rabelo</strong></a><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu"><span class="sr-only">Abrir menu</span>☰</button><nav id="menu" class="site-nav" aria-label="Navegação principal"><a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a><a href="../professional.html">Profissional</a><a class="active" href="../library.html">Biblioteca</a><a href="../contact.html">Contato</a></nav></header><main id="conteudo" class="project-page project-red"><section class="project-hero"><div class="project-hero-copy reveal"><a class="back-link" href="../library.html">← Voltar à Biblioteca</a><p class="eyebrow">ÁUDIO E DSP</p><h1>FXone Studio</h1><p class="project-lead">Equipamentos virtuais em uma cadeia de áudio extensível.</p><div class="tech-list large"><span>C++20</span><span>JUCE</span><span>CMake</span><span>DSP</span><span>MSVC</span><span>JSON</span></div><span class="project-status">Em desenvolvimento</span></div><div class="project-hero-icon reveal"><img src="../assets/images/projects/fxone-studio/fxone-icon.png" alt="Ícone do projeto FXone Studio"></div></section><section class="project-story"><article class="story-block reveal"><p class="eyebrow">O DESAFIO</p><h2>Contexto</h2><p>Soluções de áudio precisam equilibrar uma experiência visual intuitiva com processamento em tempo real, persistência de projetos e expansão segura do catálogo de equipamentos.</p></article><article class="story-block reveal"><p class="eyebrow">A SOLUÇÃO</p><h2>Produto</h2><p>O FXone Studio organiza pedais, amplificadores, caixas e racks como equipamentos manipuláveis, enquanto módulos DSP independentes executam o processamento sem acoplar cada modelo ao núcleo do aplicativo.</p></article></section><section class="project-capabilities reveal"><div class="section-heading"><p class="eyebrow">PRINCIPAIS CAPACIDADES</p><h2>O que o produto reúne</h2></div><ul><li>Criação, abertura e persistência versionada de projetos</li><li>Biblioteca visual de equipamentos</li><li>Composição de rigs por arrastar e soltar</li><li>Categorias para pedais, amplificadores, caixas e racks</li><li>Parâmetros definidos por manifestos de equipamento</li><li>Seleção de dispositivos e medidores de áudio</li><li>Cadeia de processamento em tempo real</li><li>Módulos DSP independentes e extensíveis</li><li>Fundação preparada para gravação e novos equipamentos</li></ul></section><section class="project-technical"><article class="technical-card reveal"><p class="eyebrow">ARQUITETURA</p><h2>Construído para evoluir</h2><p>Aplicação C++20 baseada em JUCE e CMake, organizada como monólito modular. Bundles reúnem manifesto, arte, presets e binário DSP, enquanto a cadeia de áudio em tempo real utiliza snapshots preparados fora do callback crítico.</p></article><article class="technical-card accent-card reveal"><p class="eyebrow">DIFERENCIAL</p><h2>Decisão de produto</h2><p>Novos equipamentos podem evoluir como bundles autônomos. O host permanece genérico e a thread de áudio não depende de interface, arquivos ou renderização.</p></article></section><section class="project-gallery reveal"><p class="eyebrow">GALERIA</p><div class="gallery-placeholder"><span>Capturas da interface serão adicionadas aqui.</span></div></section><nav class="project-pagination" aria-label="Outros projetos"><a href="echoiq.html"><small>PROJETO ANTERIOR</small><strong>← EchoIQ</strong></a><a href="vstick.html"><small>PRÓXIMO PROJETO</small><strong>vStick →</strong></a></nav></main><footer class="site-footer static"><span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span></footer></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Ambiente desktop para criação de rigs virtuais, organização visual de equipamentos e processamento de áudio em tempo real."
+    />
+    <meta name="theme-color" content="#0b1018" />
+    <title>FXone Studio | Biblioteca de Jansen Rabelo</title>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="../src/styles/update-1.1.0.css" />
+    <link rel="stylesheet" href="../src/styles/library.css" />
+    <script type="module" src="../src/scripts/app.js"></script>
+  </head>
+  <body data-page="project">
+    <header class="site-header">
+      <a class="brand" href="../index.html"
+        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+      ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menu</span>☰
+      </button>
+      <nav id="menu" class="site-nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a
+        ><a href="../professional.html">Profissional</a
+        ><a class="active" href="../library.html">Biblioteca</a
+        ><a href="../contact.html">Contato</a>
+      </nav>
+    </header>
+    <main id="conteudo" class="project-page project-red">
+      <section class="project-hero">
+        <div class="project-hero-copy reveal">
+          <a class="back-link" href="../library.html">← Voltar à Biblioteca</a>
+          <p class="eyebrow">ÁUDIO E DSP</p>
+          <h1>FXone Studio</h1>
+          <p class="project-lead">Equipamentos virtuais em uma cadeia de áudio extensível.</p>
+          <div class="tech-list large">
+            <span>C++20</span><span>JUCE</span><span>CMake</span><span>DSP</span><span>MSVC</span
+            ><span>JSON</span>
+          </div>
+          <span class="project-status">Em desenvolvimento</span>
+        </div>
+        <div class="project-hero-icon reveal">
+          <img
+            src="../assets/images/projects/fxone-studio/fxone-icon.png"
+            alt="Ícone do projeto FXone Studio"
+          />
+        </div>
+      </section>
+      <section class="project-story">
+        <article class="story-block reveal">
+          <p class="eyebrow">O DESAFIO</p>
+          <h2>Contexto</h2>
+          <p>
+            Soluções de áudio precisam equilibrar uma experiência visual intuitiva com processamento
+            em tempo real, persistência de projetos e expansão segura do catálogo de equipamentos.
+          </p>
+        </article>
+        <article class="story-block reveal">
+          <p class="eyebrow">A SOLUÇÃO</p>
+          <h2>Produto</h2>
+          <p>
+            O FXone Studio organiza pedais, amplificadores, caixas e racks como equipamentos
+            manipuláveis, enquanto módulos DSP independentes executam o processamento sem acoplar
+            cada modelo ao núcleo do aplicativo.
+          </p>
+        </article>
+      </section>
+      <section class="project-capabilities reveal">
+        <div class="section-heading">
+          <p class="eyebrow">PRINCIPAIS CAPACIDADES</p>
+          <h2>O que o produto reúne</h2>
+        </div>
+        <ul>
+          <li>Criação, abertura e persistência versionada de projetos</li>
+          <li>Biblioteca visual de equipamentos</li>
+          <li>Composição de rigs por arrastar e soltar</li>
+          <li>Categorias para pedais, amplificadores, caixas e racks</li>
+          <li>Parâmetros definidos por manifestos de equipamento</li>
+          <li>Seleção de dispositivos e medidores de áudio</li>
+          <li>Cadeia de processamento em tempo real</li>
+          <li>Módulos DSP independentes e extensíveis</li>
+          <li>Fundação preparada para gravação e novos equipamentos</li>
+        </ul>
+      </section>
+      <section class="project-technical">
+        <article class="technical-card reveal">
+          <p class="eyebrow">ARQUITETURA</p>
+          <h2>Construído para evoluir</h2>
+          <p>
+            Aplicação C++20 baseada em JUCE e CMake, organizada como monólito modular. Bundles
+            reúnem manifesto, arte, presets e binário DSP, enquanto a cadeia de áudio em tempo real
+            utiliza snapshots preparados fora do callback crítico.
+          </p>
+        </article>
+        <article class="technical-card accent-card reveal">
+          <p class="eyebrow">DIFERENCIAL</p>
+          <h2>Decisão de produto</h2>
+          <p>
+            Novos equipamentos podem evoluir como bundles autônomos. O host permanece genérico e a
+            thread de áudio não depende de interface, arquivos ou renderização.
+          </p>
+        </article>
+      </section>
+      <section class="project-gallery reveal">
+        <p class="eyebrow">GALERIA</p>
+        <div class="gallery-placeholder">
+          <span>Capturas da interface serão adicionadas aqui.</span>
+        </div>
+      </section>
+      <nav class="project-pagination" aria-label="Outros projetos">
+        <a href="echoiq.html"><small>PROJETO ANTERIOR</small><strong>← EchoIQ</strong></a
+        ><a href="vstick.html"><small>PRÓXIMO PROJETO</small><strong>vStick →</strong></a>
+      </nav>
+    </main>
+    <footer class="site-footer static">
+      <span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span>
+    </footer>
+  </body>
+</html>

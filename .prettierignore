@@ -1,0 +1,10 @@
+node_modules/
+dist/
+assets/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.ico
+*.zip
+professional.before-cv-update.html

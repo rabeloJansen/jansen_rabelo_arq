@@ -1,1 +1,28 @@
-import { createServer } from 'node:http';import { readFile,stat } from 'node:fs/promises';import { extname,join,normalize } from 'node:path';const port=Number(process.env.PORT||4173),root=process.cwd(),types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.ico':'image/x-icon','.png':'image/png','.jpg':'image/jpeg','.pdf':'application/pdf'};createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost'),rel=url.pathname==='/'?'index.html':decodeURIComponent(url.pathname.slice(1)),file=normalize(join(root,rel));if(!file.startsWith(root))throw new Error('invalid path');if(!(await stat(file)).isFile())throw new Error('not file');res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream'});res.end(await readFile(file))}catch{res.writeHead(404);res.end('Not found')}}).listen(port,()=>console.log(`Portfolio: http://localhost:${port}`));
+import { createServer } from 'node:http';
+import { readFile, stat } from 'node:fs/promises';
+import { extname, join, normalize } from 'node:path';
+const port = Number(process.env.PORT || 4173),
+  root = process.cwd(),
+  types = {
+    '.html': 'text/html; charset=utf-8',
+    '.css': 'text/css; charset=utf-8',
+    '.js': 'text/javascript; charset=utf-8',
+    '.ico': 'image/x-icon',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.pdf': 'application/pdf',
+  };
+createServer(async (req, res) => {
+  try {
+    const url = new URL(req.url, 'http://localhost'),
+      rel = url.pathname === '/' ? 'index.html' : decodeURIComponent(url.pathname.slice(1)),
+      file = normalize(join(root, rel));
+    if (!file.startsWith(root)) throw new Error('invalid path');
+    if (!(await stat(file)).isFile()) throw new Error('not file');
+    res.writeHead(200, { 'Content-Type': types[extname(file)] || 'application/octet-stream' });
+    res.end(await readFile(file));
+  } catch {
+    res.writeHead(404);
+    res.end('Not found');
+  }
+}).listen(port, () => console.log(`Portfolio: http://localhost:${port}`));

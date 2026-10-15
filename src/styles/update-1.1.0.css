@@ -1,8 +1,85 @@
-.brand img{display:block;width:42px;height:42px;object-fit:contain;border-radius:10px}
-.hero{grid-template-columns:minmax(0,980px);justify-content:start;background-image:linear-gradient(90deg,rgba(5,10,18,.92) 0%,rgba(5,10,18,.72) 48%,rgba(5,10,18,.28) 100%),url("../../assets/images/background/background_main.png");background-size:cover;background-position:center;background-repeat:no-repeat}
-.hero-copy{position:relative;z-index:1}
-.about-image{margin:0;place-self:center;width:clamp(440px,42vw,720px);height:min(78vh,760px);overflow:visible;background:transparent;border:0;box-shadow:none;display:flex;align-items:center;justify-content:center}
-.about-image img{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center bottom;background:transparent;filter:drop-shadow(0 24px 34px rgba(0,0,0,.32))}
-@media(max-width:1100px){.about-image{width:clamp(380px,44vw,580px);height:min(68vh,620px)}}@media(max-width:800px){.brand img{width:40px;height:40px}.hero{background-position:65% center}.about-image{width:min(100%,520px);height:auto;aspect-ratio:1;align-self:center}.about-image img{height:auto}.github-mark{font-size:.68rem;font-weight:800;letter-spacing:-.04em}}
+.brand img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.hero {
+  grid-template-columns: minmax(0, 980px);
+  justify-content: start;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(5, 10, 18, 0.92) 0%,
+      rgba(5, 10, 18, 0.72) 48%,
+      rgba(5, 10, 18, 0.28) 100%
+    ),
+    url('../../assets/images/background/background_main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+.about-image {
+  margin: 0;
+  place-self: center;
+  width: clamp(440px, 42vw, 720px);
+  height: min(78vh, 760px);
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  background: transparent;
+  filter: drop-shadow(0 24px 34px rgba(0, 0, 0, 0.32));
+}
+@media (max-width: 1100px) {
+  .about-image {
+    width: clamp(380px, 44vw, 580px);
+    height: min(68vh, 620px);
+  }
+}
+@media (max-width: 800px) {
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+  .hero {
+    background-position: 65% center;
+  }
+  .about-image {
+    width: min(100%, 520px);
+    height: auto;
+    aspect-ratio: 1;
+    align-self: center;
+  }
+  .about-image img {
+    height: auto;
+  }
+  .github-mark {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+}
 
-.github-mark{font-size:.68rem;font-weight:800;letter-spacing:-.04em}
+.github-mark {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}

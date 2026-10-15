@@ -1,1 +1,124 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Aplicativo que transforma o movimento do mouse em dois eixos analógicos de um joystick virtual para simuladores de voo."><meta name="theme-color" content="#0b1018"><title>vStick | Biblioteca de Jansen Rabelo</title><link rel="icon" type="image/png" href="../assets/icons/favicon.png"><link rel="stylesheet" href="../src/styles/main.css"><link rel="stylesheet" href="../src/styles/update-1.1.0.css"><link rel="stylesheet" href="../src/styles/library.css"><script type="module" src="../src/scripts/app.js"></script></head><body data-page="project"><header class="site-header"><a class="brand" href="../index.html"><img src="../assets/icons/favicon.png" alt=""><strong>Jansen Rabelo</strong></a><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu"><span class="sr-only">Abrir menu</span>☰</button><nav id="menu" class="site-nav" aria-label="Navegação principal"><a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a><a href="../professional.html">Profissional</a><a class="active" href="../library.html">Biblioteca</a><a href="../contact.html">Contato</a></nav></header><main id="conteudo" class="project-page project-purple"><section class="project-hero"><div class="project-hero-copy reveal"><a class="back-link" href="../library.html">← Voltar à Biblioteca</a><p class="eyebrow">SIMULAÇÃO</p><h1>vStick</h1><p class="project-lead">Controle analógico acessível a partir do mouse.</p><div class="tech-list large"><span>Python</span><span>PyQt6</span><span>vJoy</span><span>pynput</span><span>PyInstaller</span></div><span class="project-status">Versão 1.0.0</span></div><div class="project-hero-icon reveal"><img src="../assets/images/projects/vstick/vstick-icon.png" alt="Ícone do projeto vStick"></div></section><section class="project-story"><article class="story-block reveal"><p class="eyebrow">O DESAFIO</p><h2>Contexto</h2><p>O mouse oferece precisão e ampla disponibilidade, mas simuladores esperam eixos analógicos contínuos fornecidos por um dispositivo de joystick reconhecido pelo Windows.</p></article><article class="story-block reveal"><p class="eyebrow">A SOLUÇÃO</p><h2>Produto</h2><p>O vStick converte a posição do mouse em comandos X e Y, utiliza o vJoy como dispositivo virtual e acrescenta controles de ativação, suavização, inversão e retorno seguro à última posição.</p></article></section><section class="project-capabilities reveal"><div class="section-heading"><p class="eyebrow">PRINCIPAIS CAPACIDADES</p><h2>O que o produto reúne</h2></div><ul><li>Controle dos eixos X e Y pela posição do mouse</li><li>Tecla global para ativar ou desativar o controle</li><li>Seleção do monitor usado como área de comando</li><li>Overlay de centro, estado e posição atual</li><li>Exibição opcional dos valores normalizados dos eixos</li><li>Suavização configurável do movimento</li><li>Restauração da última posição comandada</li><li>Inversão independente dos eixos</li><li>Configuração persistente, logs e diagnóstico</li><li>Empacotamento como executável para Windows</li></ul></section><section class="project-technical"><article class="technical-card reveal"><p class="eyebrow">ARQUITETURA</p><h2>Construído para evoluir</h2><p>Aplicativo desktop Windows em Python e PyQt6, estruturado como monólito modular. A apresentação, as regras de mapeamento, a configuração e os adaptadores de mouse, monitor, teclado e vJoy possuem responsabilidades separadas e testáveis.</p></article><article class="technical-card accent-card reveal"><p class="eyebrow">DIFERENCIAL</p><h2>Decisão de produto</h2><p>O produto combina o mapeamento do mouse com comportamento operacional seguro, incluindo estado global, suavização, múltiplos monitores, persistência e diagnóstico.</p></article></section><section class="project-gallery reveal"><p class="eyebrow">GALERIA</p><div class="gallery-placeholder"><span>Capturas da interface serão adicionadas aqui.</span></div></section><nav class="project-pagination" aria-label="Outros projetos"><a href="fxone-studio.html"><small>PROJETO ANTERIOR</small><strong>← FXone Studio</strong></a><a href="databim.html"><small>PRÓXIMO PROJETO</small><strong>dataBIM →</strong></a></nav></main><footer class="site-footer static"><span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span></footer></body></html>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Aplicativo que transforma o movimento do mouse em dois eixos analógicos de um joystick virtual para simuladores de voo."
+    />
+    <meta name="theme-color" content="#0b1018" />
+    <title>vStick | Biblioteca de Jansen Rabelo</title>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="../src/styles/update-1.1.0.css" />
+    <link rel="stylesheet" href="../src/styles/library.css" />
+    <script type="module" src="../src/scripts/app.js"></script>
+  </head>
+  <body data-page="project">
+    <header class="site-header">
+      <a class="brand" href="../index.html"
+        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+      ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menu</span>☰
+      </button>
+      <nav id="menu" class="site-nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a
+        ><a href="../professional.html">Profissional</a
+        ><a class="active" href="../library.html">Biblioteca</a
+        ><a href="../contact.html">Contato</a>
+      </nav>
+    </header>
+    <main id="conteudo" class="project-page project-purple">
+      <section class="project-hero">
+        <div class="project-hero-copy reveal">
+          <a class="back-link" href="../library.html">← Voltar à Biblioteca</a>
+          <p class="eyebrow">SIMULAÇÃO</p>
+          <h1>vStick</h1>
+          <p class="project-lead">Controle analógico acessível a partir do mouse.</p>
+          <div class="tech-list large">
+            <span>Python</span><span>PyQt6</span><span>vJoy</span><span>pynput</span
+            ><span>PyInstaller</span>
+          </div>
+          <span class="project-status">Versão 1.0.0</span>
+        </div>
+        <div class="project-hero-icon reveal">
+          <img
+            src="../assets/images/projects/vstick/vstick-icon.png"
+            alt="Ícone do projeto vStick"
+          />
+        </div>
+      </section>
+      <section class="project-story">
+        <article class="story-block reveal">
+          <p class="eyebrow">O DESAFIO</p>
+          <h2>Contexto</h2>
+          <p>
+            O mouse oferece precisão e ampla disponibilidade, mas simuladores esperam eixos
+            analógicos contínuos fornecidos por um dispositivo de joystick reconhecido pelo Windows.
+          </p>
+        </article>
+        <article class="story-block reveal">
+          <p class="eyebrow">A SOLUÇÃO</p>
+          <h2>Produto</h2>
+          <p>
+            O vStick converte a posição do mouse em comandos X e Y, utiliza o vJoy como dispositivo
+            virtual e acrescenta controles de ativação, suavização, inversão e retorno seguro à
+            última posição.
+          </p>
+        </article>
+      </section>
+      <section class="project-capabilities reveal">
+        <div class="section-heading">
+          <p class="eyebrow">PRINCIPAIS CAPACIDADES</p>
+          <h2>O que o produto reúne</h2>
+        </div>
+        <ul>
+          <li>Controle dos eixos X e Y pela posição do mouse</li>
+          <li>Tecla global para ativar ou desativar o controle</li>
+          <li>Seleção do monitor usado como área de comando</li>
+          <li>Overlay de centro, estado e posição atual</li>
+          <li>Exibição opcional dos valores normalizados dos eixos</li>
+          <li>Suavização configurável do movimento</li>
+          <li>Restauração da última posição comandada</li>
+          <li>Inversão independente dos eixos</li>
+          <li>Configuração persistente, logs e diagnóstico</li>
+          <li>Empacotamento como executável para Windows</li>
+        </ul>
+      </section>
+      <section class="project-technical">
+        <article class="technical-card reveal">
+          <p class="eyebrow">ARQUITETURA</p>
+          <h2>Construído para evoluir</h2>
+          <p>
+            Aplicativo desktop Windows em Python e PyQt6, estruturado como monólito modular. A
+            apresentação, as regras de mapeamento, a configuração e os adaptadores de mouse,
+            monitor, teclado e vJoy possuem responsabilidades separadas e testáveis.
+          </p>
+        </article>
+        <article class="technical-card accent-card reveal">
+          <p class="eyebrow">DIFERENCIAL</p>
+          <h2>Decisão de produto</h2>
+          <p>
+            O produto combina o mapeamento do mouse com comportamento operacional seguro, incluindo
+            estado global, suavização, múltiplos monitores, persistência e diagnóstico.
+          </p>
+        </article>
+      </section>
+      <section class="project-gallery reveal">
+        <p class="eyebrow">GALERIA</p>
+        <div class="gallery-placeholder">
+          <span>Capturas da interface serão adicionadas aqui.</span>
+        </div>
+      </section>
+      <nav class="project-pagination" aria-label="Outros projetos">
+        <a href="fxone-studio.html"
+          ><small>PROJETO ANTERIOR</small><strong>← FXone Studio</strong></a
+        ><a href="databim.html"><small>PRÓXIMO PROJETO</small><strong>dataBIM →</strong></a>
+      </nav>
+    </main>
+    <footer class="site-footer static">
+      <span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span>
+    </footer>
+  </body>
+</html>
