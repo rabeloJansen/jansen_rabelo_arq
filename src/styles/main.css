@@ -72,10 +72,24 @@ button {
   z-index: 50;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  flex: 0 0 auto;
+  min-width: 0;
   text-decoration: none;
+}
+.brand img {
+  display: block;
+  flex: 0 0 42px;
+  width: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  height: 42px;
+  min-height: 42px;
+  max-height: 42px;
+  object-fit: contain;
+  border-radius: 10px;
 }
 .brand span {
   display: grid;
@@ -818,8 +832,13 @@ button {
 }
 @media (max-width: 800px) {
   .brand img {
+    flex-basis: 40px;
     width: 40px;
+    min-width: 40px;
+    max-width: 40px;
     height: 40px;
+    min-height: 40px;
+    max-height: 40px;
   }
   .hero {
     background-position: 65% center;
