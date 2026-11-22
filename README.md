@@ -1,23 +1,15 @@
-# Jansen Rabelo Portfolio
+# Jansen Rabelo — Portfólio
 
-Portfólio estático, responsivo e sem dependências de runtime. A página inicial preserva a navegação horizontal no desktop e adapta o conteúdo para rolagem vertical em telas menores.
+Portfólio estático, responsivo e sem dependências de runtime. A página inicial usa navegação horizontal no desktop e rolagem vertical em telas menores.
 
-## Decisões principais
-
-- nome do diretório: `jansen-rabelo-portfolio`;
-- arquitetura estática e proporcional ao escopo;
-- CSS e JavaScript separados por responsabilidade;
-- configuração de contato centralizada;
-- Biblioteca como catálogo filtrável de projetos;
-- Profissional reúne perfil, experiência, competências e formação;
-- acessibilidade: navegação por teclado, link de salto, foco semântico e redução de movimento;
-- nenhuma dependência externa ou coleta de dados.
+Publicado em: https://rabelojansen.github.io/jansen_rabelo_arq/
 
 ## Executar localmente
 
 Requer Node.js 18 ou superior.
 
 ```bash
+npm install
 npm start
 ```
 
@@ -30,47 +22,56 @@ npm run check
 npm test
 ```
 
-## Configuração de contato
+## Biblioteca de projetos
 
-Edite `src/scripts/contact-config.js`. Use somente dados que possam ser públicos. Exemplos de formato:
+Os projetos ficam em uma única fonte: `src/data/projects.js`. A partir dela:
 
-- e-mail: `mailto:nome@dominio.com`;
-- LinkedIn/Instagram: endereço completo `https://...`;
-- WhatsApp: `https://wa.me/55DDDNUMERO`, somente números.
+- a página `library.html` monta os cards e os filtros (`src/scripts/library.js`);
+- o script `scripts/build-projects.mjs` gera as páginas `projects/<id>.html`, o `sitemap.xml` e o `robots.txt`.
 
-## Recursos do projeto anterior
+Para adicionar ou editar um projeto:
 
-Os arquivos binários não estavam incorporados ao pacote Markdown analisado. Para manter o download do currículo, copie o PDF anterior para:
+1. edite `src/data/projects.js` (o campo `filter` precisa existir em `library.html`);
+2. coloque o ícone em `assets/images/projects/<id>/<id>-icon.webp` (360 × 360);
+3. coloque as capturas em `assets/images/projects/<id>/screens/` (WebP, até 1600 px de largura) e liste-as em `screens`, com `width`, `height` e `caption`;
+4. rode `npm run build:projects` e `npm test`.
 
-`assets/download/JANSEN-RABELO-PT-BR.pdf`
+Não edite os arquivos em `projects/` à mão: eles são sobrescritos pelo gerador.
 
-Se desejar usar o favicon antigo, copie-o para:
+As páginas de projeto usam `src/scripts/gallery.js` para ampliar as capturas (teclado: setas e Esc).
 
-`assets/icons/favicon.ico`
+## Configuração
 
-A ausência desses arquivos não impede o funcionamento das páginas, exceto o download do currículo e o ícone personalizado.
-
-## Hospedagem
-
-O projeto pode ser publicado como site estático. O documento inicial é `index.html`.
+- Contato: `src/scripts/contact-config.js`. Use somente dados que possam ser públicos.
+- Endereço público do site (links canônicos, Open Graph e sitemap): `src/data/site.js`. Se o domínio mudar, ajuste ali e também nas tags `canonical`/`og:` de `index.html`, `professional.html`, `library.html` e `contact.html`, além dos caminhos de `404.html`.
 
 ## Estrutura
 
 ```text
-jansen-rabelo-portfolio/
 ├── assets/
-│   ├── download/
-│   └── icons/
-├── docs/architecture/decisions/
+│   ├── download/            currículos em PDF
+│   ├── icons/               favicon
+│   └── images/              fundo, retrato, imagem de compartilhamento e projetos
+├── docs/architecture/
+├── projects/                páginas geradas (não editar)
 ├── scripts/
+│   ├── build-projects.mjs   gerador das páginas de projeto e do sitemap
+│   └── serve.mjs            servidor local
 ├── src/
-│   ├── scripts/
-│   └── styles/
+│   ├── data/                projects.js e site.js
+│   ├── scripts/             app.js, library.js, gallery.js, contact-config.js
+│   └── styles/              main.css, library.css, professional.css, cv-downloads.css
 ├── tests/
+├── 404.html
 ├── contact.html
 ├── index.html
 ├── library.html
-├── professional.html
-├── package.json
-└── README.md
+└── professional.html
 ```
+
+## Princípios
+
+- arquitetura estática e proporcional ao escopo;
+- CSS e JavaScript separados por responsabilidade;
+- acessibilidade: navegação por teclado, link de salto, foco visível e redução de movimento;
+- nenhuma dependência externa em produção e nenhuma coleta de dados.

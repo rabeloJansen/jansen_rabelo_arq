@@ -77,20 +77,6 @@ function reveal() {
   );
   qsa('.reveal').forEach(x => io.observe(x));
 }
-function filters() {
-  const w = qs('[data-filters]');
-  if (!w) return;
-  w.onclick = e => {
-    const b = e.target.closest('[data-filter]');
-    if (!b) return;
-    qsa('button', w).forEach(x => x.classList.toggle('active', x === b));
-    qsa('[data-category]').forEach(
-      c =>
-        (c.hidden =
-          b.dataset.filter !== 'all' && !c.dataset.category.split(' ').includes(b.dataset.filter))
-    );
-  };
-}
 function contacts() {
   qsa('[data-contact]').forEach(a => {
     const x = CONTACTS[a.dataset.contact];
@@ -116,6 +102,5 @@ function contacts() {
 menu();
 horizontal();
 reveal();
-filters();
 contacts();
 qsa('[data-year]').forEach(x => (x.textContent = new Date().getFullYear()));

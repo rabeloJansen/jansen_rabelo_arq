@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rabelojansen.github.io/jansen_rabelo_arq/sitemap.xml

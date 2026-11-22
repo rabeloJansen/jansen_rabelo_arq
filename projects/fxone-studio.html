@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Arquivo gerado por scripts/build-projects.mjs. Edite src/data/projects.js. -->
 <html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
@@ -8,16 +9,38 @@
       content="Ambiente desktop para criação de rigs virtuais, organização visual de equipamentos e processamento de áudio em tempo real."
     />
     <meta name="theme-color" content="#0b1018" />
+    <link
+      rel="canonical"
+      href="https://rabelojansen.github.io/jansen_rabelo_arq/projects/fxone-studio.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Jansen Rabelo" />
+    <meta property="og:title" content="FXone Studio | Jansen Rabelo" />
+    <meta
+      property="og:description"
+      content="Ambiente desktop para criação de rigs virtuais, organização visual de equipamentos e processamento de áudio em tempo real."
+    />
+    <meta
+      property="og:url"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/projects/fxone-studio.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/projects/fxone-studio/screens/fxone-studio-home.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>FXone Studio | Biblioteca de Jansen Rabelo</title>
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
     <link rel="stylesheet" href="../src/styles/main.css" />
-    <link rel="stylesheet" href="../src/styles/update-1.1.0.css" />
     <link rel="stylesheet" href="../src/styles/library.css" />
     <script type="module" src="../src/scripts/app.js"></script>
+    <script type="module" src="../src/scripts/gallery.js"></script>
   </head>
   <body data-page="project">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header class="site-header">
-      <a class="brand" href="../index.html"
+      <a class="brand" href="../index.html" aria-label="Ir para o início"
         ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
       ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
         <span class="sr-only">Abrir menu</span>☰
@@ -44,8 +67,10 @@
         </div>
         <div class="project-hero-icon reveal">
           <img
-            src="../assets/images/projects/fxone-studio/fxone-icon.png"
+            src="../assets/images/projects/fxone-studio/fxone-studio-icon.webp"
             alt="Ícone do projeto FXone Studio"
+            width="360"
+            height="360"
           />
         </div>
       </section>
@@ -67,6 +92,31 @@
             cada modelo ao núcleo do aplicativo.
           </p>
         </article>
+      </section>
+      <section class="project-gallery reveal" aria-labelledby="gallery-title">
+        <p class="eyebrow">GALERIA</p>
+        <h2 id="gallery-title" class="sr-only">Capturas de tela de FXone Studio</h2>
+        <div class="gallery-grid single" data-gallery>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="0"
+              aria-label="Ampliar imagem: Tela inicial com criação, abertura e lista de projetos recentes."
+            >
+              <img
+                src="../assets/images/projects/fxone-studio/screens/fxone-studio-home.webp"
+                alt="Tela inicial com criação, abertura e lista de projetos recentes."
+                width="1280"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Tela inicial com criação, abertura e lista de projetos recentes.
+            </figcaption>
+          </figure>
+        </div>
       </section>
       <section class="project-capabilities reveal">
         <div class="section-heading">
@@ -104,15 +154,11 @@
           </p>
         </article>
       </section>
-      <section class="project-gallery reveal">
-        <p class="eyebrow">GALERIA</p>
-        <div class="gallery-placeholder">
-          <span>Capturas da interface serão adicionadas aqui.</span>
-        </div>
-      </section>
       <nav class="project-pagination" aria-label="Outros projetos">
-        <a href="echoiq.html"><small>PROJETO ANTERIOR</small><strong>← EchoIQ</strong></a
-        ><a href="vstick.html"><small>PRÓXIMO PROJETO</small><strong>vStick →</strong></a>
+        <a href="voae.html"><small>PROJETO ANTERIOR</small><strong>← Voaê!</strong></a
+        ><a href="fxone-tracks.html"
+          ><small>PRÓXIMO PROJETO</small><strong>FXone Tracks →</strong></a
+        >
       </nav>
     </main>
     <footer class="site-footer static">

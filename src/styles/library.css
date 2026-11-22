@@ -57,6 +57,9 @@
 .project-purple {
   --project-accent: #a974d6;
 }
+.project-blue {
+  --project-accent: #3fa9ff;
+}
 .portfolio-card-link {
   display: grid;
   grid-template-columns: 210px 1fr;
@@ -158,6 +161,9 @@
 }
 .project-page.project-purple {
   --project-accent: #a974d6;
+}
+.project-page.project-blue {
+  --project-accent: #3fa9ff;
 }
 .project-hero {
   min-height: 650px;
@@ -300,6 +306,131 @@
   background: #ffffff02;
   color: var(--muted);
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.gallery-grid.single {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+.gallery-grid:not(.single) .gallery-item:first-child {
+  grid-column: 1 / -1;
+}
+.gallery-item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+.gallery-item button {
+  display: block;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #0a1019;
+  overflow: hidden;
+  cursor: zoom-in;
+  box-shadow: 0 24px 60px #0007;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+.gallery-item button:hover,
+.gallery-item button:focus-visible {
+  border-color: color-mix(in srgb, var(--project-accent) 55%, var(--line));
+  transform: translateY(-3px);
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.gallery-grid.single .gallery-item {
+  max-width: min(100%, 1100px);
+}
+.gallery-item figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+.lightbox {
+  width: min(96vw, 1600px);
+  max-height: 94vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  overflow: visible;
+}
+.lightbox::backdrop {
+  background: #03060bdd;
+  backdrop-filter: blur(4px);
+}
+.lightbox figure {
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 30px 90px #000a;
+}
+.lightbox figcaption {
+  color: #c5d2e2;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.lightbox button {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #111925e6;
+  color: var(--text);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.lightbox button:hover,
+.lightbox button:focus-visible {
+  border-color: var(--cyan);
+}
+.lightbox-close {
+  top: 1.2rem;
+  right: 1.2rem;
+}
+.lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lightbox-nav.prev {
+  left: 1.2rem;
+}
+.lightbox-nav.next {
+  right: 1.2rem;
+}
+.lightbox-nav[hidden] {
+  display: none;
+}
+.lightbox-count {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--muted);
+  font-size: 0.8rem;
+}
 .project-pagination {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -351,6 +482,9 @@
   .project-capabilities ul {
     grid-template-columns: 1fr;
   }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 600px) {
   .portfolio-card-link {
@@ -374,7 +508,8 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .portfolio-card,
-  .project-icon-wrap img {
+  .project-icon-wrap img,
+  .gallery-item button {
     transition: none;
   }
   .portfolio-card:hover {

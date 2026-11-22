@@ -5,7 +5,8 @@ export const PROJECTS = Object.freeze([
     category: 'BIM e Dados',
     filter: 'bim',
     status: 'Em desenvolvimento',
-    icon: 'assets/images/projects/databim/databim-icon.png',
+    icon: 'assets/images/projects/databim/databim-icon.webp',
+    screens: [],
     page: 'projects/databim.html',
     accent: 'cyan',
     summary:
@@ -37,7 +38,23 @@ export const PROJECTS = Object.freeze([
     category: 'Inteligência Artificial',
     filter: 'ai',
     status: 'Em desenvolvimento',
-    icon: 'assets/images/projects/echoiq/echoiq-icon.png',
+    icon: 'assets/images/projects/echoiq/echoiq-icon.webp',
+    screens: [
+      {
+        src: 'assets/images/projects/echoiq/screens/echoiq-main.webp',
+        width: 1282,
+        height: 752,
+        caption:
+          'Tela principal: dados da reunião, dispositivos de áudio, níveis e controle da sessão.',
+      },
+      {
+        src: 'assets/images/projects/echoiq/screens/echoiq-config.webp',
+        width: 922,
+        height: 682,
+        caption:
+          'Configurações do modelo de IA local (Qwen via llama.cpp) para processamento offline.',
+      },
+    ],
     page: 'projects/echoiq.html',
     accent: 'violet',
     summary:
@@ -73,12 +90,72 @@ export const PROJECTS = Object.freeze([
     ],
   },
   {
+    id: 'voae',
+    name: 'Voaê!',
+    category: 'Educação',
+    filter: 'education',
+    status: 'Em desenvolvimento',
+    icon: 'assets/images/projects/voae/voae-icon.webp',
+    page: 'projects/voae.html',
+    accent: 'blue',
+    screens: [
+      {
+        src: 'assets/images/projects/voae/screens/voae-home.webp',
+        width: 1409,
+        height: 862,
+        caption: 'Página inicial com atalho para continuar os estudos e visão geral do curso.',
+      },
+      {
+        src: 'assets/images/projects/voae/screens/voae-disciplina.webp',
+        width: 1409,
+        height: 862,
+        caption: 'Mapa curricular da disciplina com progresso salvo no navegador.',
+      },
+      {
+        src: 'assets/images/projects/voae/screens/voae-aula.webp',
+        width: 1409,
+        height: 862,
+        caption: 'Página de aula com índice lateral, metadados e figuras explicativas.',
+      },
+    ],
+    summary:
+      'Plataforma web do curso teórico de Piloto Privado de Avião, com aulas autorais organizadas por disciplina e progresso salvo no navegador.',
+    lead: 'Formação teórica de Piloto Privado, aula por aula.',
+    problem:
+      'O conteúdo teórico exigido na banca de Piloto Privado (ANAC) costuma estar espalhado entre vídeos, apostilas e transcrições, sem uma progressão clara e sem verificação técnica consolidada.',
+    solution:
+      'O Voaê! organiza as cinco disciplinas em um currículo de 108 aulas e publica conteúdo autoral, revisado e alinhado a fontes oficiais, com figuras, questões e acompanhamento de progresso.',
+    features: [
+      'Cinco disciplinas e 108 aulas mapeadas no currículo',
+      'Aulas escritas em MDX com componentes e figuras próprias',
+      'Índice lateral e navegação entre aulas e disciplinas',
+      'Progresso de estudo salvo localmente no navegador',
+      'Banco de questões opcional por aula',
+      'Validação automática de todo o conteúdo antes do build',
+      'Carregamento sob demanda de cada aula',
+      'Política editorial: fontes oficiais prevalecem sobre transcrições',
+    ],
+    architecture:
+      'Aplicação web em React, TypeScript e Vite. O texto fica em dados (JSON e MDX por aula) e o visual em componentes; um registro monta disciplinas e aulas a partir das pastas, e um validador com Zod impede o build quando algum conteúdo foge do formato.',
+    innovation:
+      'O conteúdo é tratado como dado versionado e validado: criar uma aula é adicionar uma pasta, sem alterar código, o que mantém a consistência editorial à medida que o curso cresce.',
+    tech: ['React', 'TypeScript', 'Vite', 'MDX', 'Zod', 'React Router'],
+  },
+  {
     id: 'fxone-studio',
     name: 'FXone Studio',
     category: 'Áudio e DSP',
     filter: 'audio',
     status: 'Em desenvolvimento',
-    icon: 'assets/images/projects/fxone-studio/fxone-icon.png',
+    icon: 'assets/images/projects/fxone-studio/fxone-studio-icon.webp',
+    screens: [
+      {
+        src: 'assets/images/projects/fxone-studio/screens/fxone-studio-home.webp',
+        width: 1280,
+        height: 800,
+        caption: 'Tela inicial com criação, abertura e lista de projetos recentes.',
+      },
+    ],
     page: 'projects/fxone-studio.html',
     accent: 'red',
     summary:
@@ -106,12 +183,60 @@ export const PROJECTS = Object.freeze([
     tech: ['C++20', 'JUCE', 'CMake', 'DSP', 'MSVC', 'JSON'],
   },
   {
+    id: 'fxone-tracks',
+    name: 'FXone Tracks',
+    category: 'Áudio e DSP',
+    filter: 'audio',
+    status: 'Em desenvolvimento',
+    icon: 'assets/images/projects/fxone-tracks/fxone-tracks-icon.webp',
+    page: 'projects/fxone-tracks.html',
+    accent: 'red',
+    screens: [
+      {
+        src: 'assets/images/projects/fxone-tracks/screens/fxone-tracks-mixer.webp',
+        width: 1280,
+        height: 800,
+        caption: 'Mixer multifaixa com as seis faixas separadas, canal Master e transporte.',
+      },
+    ],
+    summary:
+      'Aplicativo desktop que separa músicas em faixas individuais com inteligência artificial e as reúne em um mixer multifaixa em tempo real.',
+    lead: 'Separação de faixas e mixagem para estudo musical.',
+    problem:
+      'Para estudar, tirar uma música ou ensaiar, músicos precisam isolar ou silenciar instrumentos de uma gravação pronta, algo que normalmente exige ferramentas profissionais e etapas manuais.',
+    solution:
+      'O FXone Tracks importa o áudio, separa vocais, guitarra, baixo, bateria, teclados e demais sons com o Demucs e abre o resultado em um mixer com volume, mute e solo por faixa, além da exportação da mixagem.',
+    features: [
+      'Separação em seis faixas: vocais, guitarra, baixo, bateria, teclados e outros',
+      'Modelo de separação Demucs executado localmente com PyTorch',
+      'Mixer multifaixa com volume, mute e solo por faixa',
+      'Canal Master com medidor e indicador de clipping',
+      'Reprodução em tempo real com transporte e linha do tempo',
+      'Exportação da mixagem renderizada',
+      'Biblioteca de mixers recentes',
+      'Processamento em segundo plano, cancelável e sem travar a interface',
+    ],
+    architecture:
+      'Aplicativo desktop em Python e PyQt5. Importação e separação rodam em workers fora da thread principal, com cancelamento e tratamento de erros dedicado; o motor de mixagem em tempo real e a renderização para exportação são componentes independentes.',
+    innovation:
+      'Transforma um modelo de IA de pesquisa em uma ferramenta de prática musical: a separação acontece no próprio computador e o resultado já chega como um mixer pronto para uso.',
+    tech: ['Python', 'PyQt5', 'Demucs', 'PyTorch', 'NumPy', 'sounddevice'],
+  },
+  {
     id: 'vstick',
     name: 'vStick',
     category: 'Simulação',
     filter: 'simulation',
     status: 'Versão 1.0.0',
-    icon: 'assets/images/projects/vstick/vstick-icon.png',
+    icon: 'assets/images/projects/vstick/vstick-icon.webp',
+    screens: [
+      {
+        src: 'assets/images/projects/vstick/screens/vstick-main.webp',
+        width: 326,
+        height: 531,
+        caption: 'Painel de controle: ativação, monitor, suavização e opções de eixos.',
+      },
+    ],
     page: 'projects/vstick.html',
     accent: 'purple',
     summary:

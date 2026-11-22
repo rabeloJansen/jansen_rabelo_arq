@@ -1,0 +1,167 @@
+<!doctype html>
+<!-- Arquivo gerado por scripts/build-projects.mjs. Edite src/data/projects.js. -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Aplicativo desktop que separa músicas em faixas individuais com inteligência artificial e as reúne em um mixer multifaixa em tempo real."
+    />
+    <meta name="theme-color" content="#0b1018" />
+    <link
+      rel="canonical"
+      href="https://rabelojansen.github.io/jansen_rabelo_arq/projects/fxone-tracks.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Jansen Rabelo" />
+    <meta property="og:title" content="FXone Tracks | Jansen Rabelo" />
+    <meta
+      property="og:description"
+      content="Aplicativo desktop que separa músicas em faixas individuais com inteligência artificial e as reúne em um mixer multifaixa em tempo real."
+    />
+    <meta
+      property="og:url"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/projects/fxone-tracks.html"
+    />
+    <meta
+      property="og:image"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/projects/fxone-tracks/screens/fxone-tracks-mixer.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>FXone Tracks | Biblioteca de Jansen Rabelo</title>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
+    <link rel="stylesheet" href="../src/styles/main.css" />
+    <link rel="stylesheet" href="../src/styles/library.css" />
+    <script type="module" src="../src/scripts/app.js"></script>
+    <script type="module" src="../src/scripts/gallery.js"></script>
+  </head>
+  <body data-page="project">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Ir para o início"
+        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+      ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
+        <span class="sr-only">Abrir menu</span>☰
+      </button>
+      <nav id="menu" class="site-nav" aria-label="Navegação principal">
+        <a href="../index.html">Início</a><a href="../index.html#sobre">Sobre mim</a
+        ><a href="../professional.html">Profissional</a
+        ><a class="active" href="../library.html">Biblioteca</a
+        ><a href="../contact.html">Contato</a>
+      </nav>
+    </header>
+    <main id="conteudo" class="project-page project-red">
+      <section class="project-hero">
+        <div class="project-hero-copy reveal">
+          <a class="back-link" href="../library.html">← Voltar à Biblioteca</a>
+          <p class="eyebrow">ÁUDIO E DSP</p>
+          <h1>FXone Tracks</h1>
+          <p class="project-lead">Separação de faixas e mixagem para estudo musical.</p>
+          <div class="tech-list large">
+            <span>Python</span><span>PyQt5</span><span>Demucs</span><span>PyTorch</span
+            ><span>NumPy</span><span>sounddevice</span>
+          </div>
+          <span class="project-status">Em desenvolvimento</span>
+        </div>
+        <div class="project-hero-icon reveal">
+          <img
+            src="../assets/images/projects/fxone-tracks/fxone-tracks-icon.webp"
+            alt="Ícone do projeto FXone Tracks"
+            width="360"
+            height="360"
+          />
+        </div>
+      </section>
+      <section class="project-story">
+        <article class="story-block reveal">
+          <p class="eyebrow">O DESAFIO</p>
+          <h2>Contexto</h2>
+          <p>
+            Para estudar, tirar uma música ou ensaiar, músicos precisam isolar ou silenciar
+            instrumentos de uma gravação pronta, algo que normalmente exige ferramentas
+            profissionais e etapas manuais.
+          </p>
+        </article>
+        <article class="story-block reveal">
+          <p class="eyebrow">A SOLUÇÃO</p>
+          <h2>Produto</h2>
+          <p>
+            O FXone Tracks importa o áudio, separa vocais, guitarra, baixo, bateria, teclados e
+            demais sons com o Demucs e abre o resultado em um mixer com volume, mute e solo por
+            faixa, além da exportação da mixagem.
+          </p>
+        </article>
+      </section>
+      <section class="project-gallery reveal" aria-labelledby="gallery-title">
+        <p class="eyebrow">GALERIA</p>
+        <h2 id="gallery-title" class="sr-only">Capturas de tela de FXone Tracks</h2>
+        <div class="gallery-grid single" data-gallery>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="0"
+              aria-label="Ampliar imagem: Mixer multifaixa com as seis faixas separadas, canal Master e transporte."
+            >
+              <img
+                src="../assets/images/projects/fxone-tracks/screens/fxone-tracks-mixer.webp"
+                alt="Mixer multifaixa com as seis faixas separadas, canal Master e transporte."
+                width="1280"
+                height="800"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Mixer multifaixa com as seis faixas separadas, canal Master e transporte.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="project-capabilities reveal">
+        <div class="section-heading">
+          <p class="eyebrow">PRINCIPAIS CAPACIDADES</p>
+          <h2>O que o produto reúne</h2>
+        </div>
+        <ul>
+          <li>Separação em seis faixas: vocais, guitarra, baixo, bateria, teclados e outros</li>
+          <li>Modelo de separação Demucs executado localmente com PyTorch</li>
+          <li>Mixer multifaixa com volume, mute e solo por faixa</li>
+          <li>Canal Master com medidor e indicador de clipping</li>
+          <li>Reprodução em tempo real com transporte e linha do tempo</li>
+          <li>Exportação da mixagem renderizada</li>
+          <li>Biblioteca de mixers recentes</li>
+          <li>Processamento em segundo plano, cancelável e sem travar a interface</li>
+        </ul>
+      </section>
+      <section class="project-technical">
+        <article class="technical-card reveal">
+          <p class="eyebrow">ARQUITETURA</p>
+          <h2>Construído para evoluir</h2>
+          <p>
+            Aplicativo desktop em Python e PyQt5. Importação e separação rodam em workers fora da
+            thread principal, com cancelamento e tratamento de erros dedicado; o motor de mixagem em
+            tempo real e a renderização para exportação são componentes independentes.
+          </p>
+        </article>
+        <article class="technical-card accent-card reveal">
+          <p class="eyebrow">DIFERENCIAL</p>
+          <h2>Decisão de produto</h2>
+          <p>
+            Transforma um modelo de IA de pesquisa em uma ferramenta de prática musical: a separação
+            acontece no próprio computador e o resultado já chega como um mixer pronto para uso.
+          </p>
+        </article>
+      </section>
+      <nav class="project-pagination" aria-label="Outros projetos">
+        <a href="fxone-studio.html"
+          ><small>PROJETO ANTERIOR</small><strong>← FXone Studio</strong></a
+        ><a href="vstick.html"><small>PRÓXIMO PROJETO</small><strong>vStick →</strong></a>
+      </nav>
+    </main>
+    <footer class="site-footer static">
+      <span>© <b data-year></b> Jansen Rabelo</span><span>Projeto autoral</span>
+    </footer>
+  </body>
+</html>

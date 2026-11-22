@@ -1,12 +1,14 @@
 {
   "name": "jansen-rabelo-portfolio",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node scripts/serve.mjs",
+    "build:projects": "node scripts/build-projects.mjs && prettier --write projects --log-level warn",
     "test": "node --test",
-    "check": "node --check src/scripts/app.js && node --check src/scripts/contact-config.js"
+    "check": "node --check src/scripts/app.js && node --check src/scripts/library.js && node --check src/scripts/gallery.js && node --check src/scripts/contact-config.js",
+    "format": "prettier --write ."
   },
   "engines": {
     "node": ">=18"
