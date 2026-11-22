@@ -114,6 +114,36 @@
   color: var(--muted);
   letter-spacing: 0.05em;
 }
+/* Estágio de desenvolvimento: ponto colorido antes do rótulo. */
+.stage {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  white-space: nowrap;
+}
+.stage::before {
+  content: '';
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 50%;
+  background: var(--stage-color);
+  box-shadow: 0 0 0.6em var(--stage-color);
+}
+.stage-version {
+  text-transform: none;
+}
+.stage-development {
+  --stage-color: #f5b74f;
+}
+.stage-alpha {
+  --stage-color: #f08a4b;
+}
+.stage-beta {
+  --stage-color: #4cd6e8;
+}
+.stage-stable {
+  --stage-color: #5fd68a;
+}
 .portfolio-card h2 {
   font-size: clamp(2rem, 3vw, 3rem);
   margin: 1.2rem 0 0.8rem;
@@ -202,8 +232,7 @@
   padding: 0.6rem 0.8rem;
 }
 .project-status {
-  display: inline-block;
-  color: var(--project-accent);
+  color: var(--text);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -227,6 +256,8 @@
 .project-hero-icon img {
   position: relative;
   width: min(100%, 430px);
+  height: auto;
+  aspect-ratio: 1;
   filter: drop-shadow(0 35px 55px #0009);
 }
 .project-story,

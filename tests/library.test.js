@@ -48,3 +48,11 @@ test('excluded projects stay out of the library', async () => {
   const ids = PROJECTS.map(project => project.id);
   for (const id of ['fpsync', 'youtube2download', 'veye']) assert.ok(!ids.includes(id), id);
 });
+
+test('every project declares a known stage and a version', async () => {
+  const { STAGES } = await import('../src/data/projects.js');
+  for (const project of PROJECTS) {
+    assert.ok(project.stage in STAGES, `${project.id}: estágio inválido`);
+    assert.match(project.version, /^\d+\.\d+\.\d+(-[\w.]+)?$/, project.id);
+  }
+});

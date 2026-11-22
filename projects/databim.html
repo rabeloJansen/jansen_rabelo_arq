@@ -27,21 +27,23 @@
     />
     <meta
       property="og:image"
-      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/og-image.jpg"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/projects/databim/screens/databim-analise.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <title>dataBIM | Biblioteca de Jansen Rabelo</title>
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
-    <link rel="stylesheet" href="../src/styles/main.css" />
-    <link rel="stylesheet" href="../src/styles/library.css" />
-    <script type="module" src="../src/scripts/app.js"></script>
-    <script type="module" src="../src/scripts/gallery.js"></script>
+    <link rel="stylesheet" href="../src/styles/main.css?v=1.2.2" />
+    <link rel="stylesheet" href="../src/styles/library.css?v=1.2.2" />
+    <script type="module" src="../src/scripts/app.js?v=1.2.2"></script>
+    <script type="module" src="../src/scripts/gallery.js?v=1.2.2"></script>
   </head>
   <body data-page="project">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="Ir para o início"
-        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+        ><img src="../assets/icons/brand-logo.webp" alt="" width="42" height="42" /><strong
+          >Jansen Rabelo</strong
+        ></a
       ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
         <span class="sr-only">Abrir menu</span>☰
       </button>
@@ -63,7 +65,9 @@
             <span>Python</span><span>PyQt6</span><span>IfcOpenShell</span><span>SQLite</span
             ><span>pandas</span><span>openpyxl</span>
           </div>
-          <span class="project-status">Em desenvolvimento</span>
+          <span class="project-status stage stage-alpha"
+            >Em testes · alpha · <span class="stage-version">v1.0.0</span></span
+          >
         </div>
         <div class="project-hero-icon reveal">
           <img
@@ -97,7 +101,66 @@
       <section class="project-gallery reveal" aria-labelledby="gallery-title">
         <p class="eyebrow">GALERIA</p>
         <h2 id="gallery-title" class="sr-only">Capturas de tela de dataBIM</h2>
-        <div class="gallery-placeholder"><span>Capturas da interface em breve.</span></div>
+        <div class="gallery-grid" data-gallery>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="0"
+              aria-label="Ampliar imagem: Análise dataBIM: montagem da entrega com modelos IFC, Design Review meta, análise inteligente e geração de BCF."
+            >
+              <img
+                src="../assets/images/projects/databim/screens/databim-analise.webp"
+                alt="Análise dataBIM: montagem da entrega com modelos IFC, Design Review meta, análise inteligente e geração de BCF."
+                width="1600"
+                height="961"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Análise dataBIM: montagem da entrega com modelos IFC, Design Review meta, análise
+              inteligente e geração de BCF.
+            </figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="1"
+              aria-label="Ampliar imagem: Extração de dados IFC com parâmetros por fase e disciplina e filtro semântico."
+            >
+              <img
+                src="../assets/images/projects/databim/screens/databim-extrair-ifc.webp"
+                alt="Extração de dados IFC com parâmetros por fase e disciplina e filtro semântico."
+                width="1600"
+                height="961"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Extração de dados IFC com parâmetros por fase e disciplina e filtro semântico.
+            </figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="2"
+              aria-label="Ampliar imagem: Dashboard de avanço dos modelos por meta, fase, unidade e disciplina."
+            >
+              <img
+                src="../assets/images/projects/databim/screens/databim-dashboard.webp"
+                alt="Dashboard de avanço dos modelos por meta, fase, unidade e disciplina."
+                width="1600"
+                height="961"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Dashboard de avanço dos modelos por meta, fase, unidade e disciplina.
+            </figcaption>
+          </figure>
+        </div>
       </section>
       <section class="project-capabilities reveal">
         <div class="section-heading">

@@ -1,12 +1,48 @@
+// Estágio de desenvolvimento de cada produto.
+// development: em construção | alpha: testes internos | beta: testes com usuários | stable: versão estável
+export const STAGES = Object.freeze({
+  development: 'Em desenvolvimento',
+  alpha: 'Em testes · alpha',
+  beta: 'Em testes · beta',
+  stable: 'Estável',
+});
+
+export const statusLabel = project => `${STAGES[project.stage]} · v${project.version}`;
+
+// Mesmo rótulo em HTML, com a versão fora da caixa-alta.
+export const statusHtml = (project, escape) =>
+  `${escape(STAGES[project.stage])} · <span class="stage-version">v${escape(project.version)}</span>`;
+
 export const PROJECTS = Object.freeze([
   {
     id: 'databim',
     name: 'dataBIM',
     category: 'BIM e Dados',
     filter: 'bim',
-    status: 'Em desenvolvimento',
+    stage: 'alpha',
+    version: '1.0.0',
     icon: 'assets/images/projects/databim/databim-icon.webp',
-    screens: [],
+    screens: [
+      {
+        src: 'assets/images/projects/databim/screens/databim-analise.webp',
+        width: 1600,
+        height: 961,
+        caption:
+          'Análise dataBIM: montagem da entrega com modelos IFC, Design Review meta, análise inteligente e geração de BCF.',
+      },
+      {
+        src: 'assets/images/projects/databim/screens/databim-extrair-ifc.webp',
+        width: 1600,
+        height: 961,
+        caption: 'Extração de dados IFC com parâmetros por fase e disciplina e filtro semântico.',
+      },
+      {
+        src: 'assets/images/projects/databim/screens/databim-dashboard.webp',
+        width: 1600,
+        height: 961,
+        caption: 'Dashboard de avanço dos modelos por meta, fase, unidade e disciplina.',
+      },
+    ],
     page: 'projects/databim.html',
     accent: 'cyan',
     summary:
@@ -37,7 +73,8 @@ export const PROJECTS = Object.freeze([
     name: 'EchoIQ',
     category: 'Inteligência Artificial',
     filter: 'ai',
-    status: 'Em desenvolvimento',
+    stage: 'beta',
+    version: '0.16.1',
     icon: 'assets/images/projects/echoiq/echoiq-icon.webp',
     screens: [
       {
@@ -94,7 +131,8 @@ export const PROJECTS = Object.freeze([
     name: 'Voaê!',
     category: 'Educação',
     filter: 'education',
-    status: 'Em desenvolvimento',
+    stage: 'development',
+    version: '0.21.0',
     icon: 'assets/images/projects/voae/voae-icon.webp',
     page: 'projects/voae.html',
     accent: 'blue',
@@ -146,9 +184,17 @@ export const PROJECTS = Object.freeze([
     name: 'FXone Studio',
     category: 'Áudio e DSP',
     filter: 'audio',
-    status: 'Em desenvolvimento',
+    stage: 'development',
+    version: '0.23.0',
     icon: 'assets/images/projects/fxone-studio/fxone-studio-icon.webp',
     screens: [
+      {
+        src: 'assets/images/projects/fxone-studio/screens/fxone-studio-rig.webp',
+        width: 1600,
+        height: 1000,
+        caption:
+          'Tela RIG: biblioteca de equipamentos, pedal ativo na cadeia e medidores de entrada e saída.',
+      },
       {
         src: 'assets/images/projects/fxone-studio/screens/fxone-studio-home.webp',
         width: 1280,
@@ -187,7 +233,8 @@ export const PROJECTS = Object.freeze([
     name: 'FXone Tracks',
     category: 'Áudio e DSP',
     filter: 'audio',
-    status: 'Em desenvolvimento',
+    stage: 'beta',
+    version: '1.0.0-beta.1',
     icon: 'assets/images/projects/fxone-tracks/fxone-tracks-icon.webp',
     page: 'projects/fxone-tracks.html',
     accent: 'red',
@@ -227,7 +274,8 @@ export const PROJECTS = Object.freeze([
     name: 'vStick',
     category: 'Simulação',
     filter: 'simulation',
-    status: 'Versão 1.0.0',
+    stage: 'stable',
+    version: '1.0.0',
     icon: 'assets/images/projects/vstick/vstick-icon.webp',
     screens: [
       {

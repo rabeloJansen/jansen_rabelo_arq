@@ -27,21 +27,23 @@
     />
     <meta
       property="og:image"
-      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/projects/fxone-studio/screens/fxone-studio-home.webp"
+      content="https://rabelojansen.github.io/jansen_rabelo_arq/assets/images/projects/fxone-studio/screens/fxone-studio-rig.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <title>FXone Studio | Biblioteca de Jansen Rabelo</title>
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
-    <link rel="stylesheet" href="../src/styles/main.css" />
-    <link rel="stylesheet" href="../src/styles/library.css" />
-    <script type="module" src="../src/scripts/app.js"></script>
-    <script type="module" src="../src/scripts/gallery.js"></script>
+    <link rel="stylesheet" href="../src/styles/main.css?v=1.2.2" />
+    <link rel="stylesheet" href="../src/styles/library.css?v=1.2.2" />
+    <script type="module" src="../src/scripts/app.js?v=1.2.2"></script>
+    <script type="module" src="../src/scripts/gallery.js?v=1.2.2"></script>
   </head>
   <body data-page="project">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="Ir para o início"
-        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+        ><img src="../assets/icons/brand-logo.webp" alt="" width="42" height="42" /><strong
+          >Jansen Rabelo</strong
+        ></a
       ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
         <span class="sr-only">Abrir menu</span>☰
       </button>
@@ -63,7 +65,9 @@
             <span>C++20</span><span>JUCE</span><span>CMake</span><span>DSP</span><span>MSVC</span
             ><span>JSON</span>
           </div>
-          <span class="project-status">Em desenvolvimento</span>
+          <span class="project-status stage stage-development"
+            >Em desenvolvimento · <span class="stage-version">v0.23.0</span></span
+          >
         </div>
         <div class="project-hero-icon reveal">
           <img
@@ -96,11 +100,31 @@
       <section class="project-gallery reveal" aria-labelledby="gallery-title">
         <p class="eyebrow">GALERIA</p>
         <h2 id="gallery-title" class="sr-only">Capturas de tela de FXone Studio</h2>
-        <div class="gallery-grid single" data-gallery>
+        <div class="gallery-grid" data-gallery>
           <figure class="gallery-item">
             <button
               type="button"
               data-gallery-open="0"
+              aria-label="Ampliar imagem: Tela RIG: biblioteca de equipamentos, pedal ativo na cadeia e medidores de entrada e saída."
+            >
+              <img
+                src="../assets/images/projects/fxone-studio/screens/fxone-studio-rig.webp"
+                alt="Tela RIG: biblioteca de equipamentos, pedal ativo na cadeia e medidores de entrada e saída."
+                width="1600"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+              />
+            </button>
+            <figcaption>
+              Tela RIG: biblioteca de equipamentos, pedal ativo na cadeia e medidores de entrada e
+              saída.
+            </figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button
+              type="button"
+              data-gallery-open="1"
               aria-label="Ampliar imagem: Tela inicial com criação, abertura e lista de projetos recentes."
             >
               <img

@@ -2,7 +2,7 @@
 // Uso: npm run build:projects
 // As páginas geradas são versionadas; edite os dados, não o HTML gerado.
 import { writeFile, mkdir } from 'node:fs/promises';
-import { PROJECTS } from '../src/data/projects.js';
+import { PROJECTS, statusHtml } from '../src/data/projects.js';
 import { SITE } from '../src/data/site.js';
 
 const esc = value =>
@@ -59,16 +59,16 @@ function page(project, index) {
     <meta name="twitter:card" content="summary_large_image" />
     <title>${esc(project.name)} | Biblioteca de Jansen Rabelo</title>
     <link rel="icon" type="image/png" href="../assets/icons/favicon.png" />
-    <link rel="stylesheet" href="../src/styles/main.css" />
-    <link rel="stylesheet" href="../src/styles/library.css" />
-    <script type="module" src="../src/scripts/app.js"></script>
-    <script type="module" src="../src/scripts/gallery.js"></script>
+    <link rel="stylesheet" href="../src/styles/main.css?v=1.2.2" />
+    <link rel="stylesheet" href="../src/styles/library.css?v=1.2.2" />
+    <script type="module" src="../src/scripts/app.js?v=1.2.2"></script>
+    <script type="module" src="../src/scripts/gallery.js?v=1.2.2"></script>
   </head>
   <body data-page="project">
     <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <header class="site-header">
       <a class="brand" href="../index.html" aria-label="Ir para o início"
-        ><img src="../assets/icons/favicon.png" alt="" /><strong>Jansen Rabelo</strong></a
+        ><img src="../assets/icons/brand-logo.webp" alt="" width="42" height="42" /><strong>Jansen Rabelo</strong></a
       ><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="menu">
         <span class="sr-only">Abrir menu</span>☰
       </button>
@@ -87,7 +87,7 @@ function page(project, index) {
           <h1>${esc(project.name)}</h1>
           <p class="project-lead">${esc(project.lead)}</p>
           <div class="tech-list large">${tech}</div>
-          <span class="project-status">${esc(project.status)}</span>
+          <span class="project-status stage stage-${esc(project.stage)}">${statusHtml(project, esc)}</span>
         </div>
         <div class="project-hero-icon reveal">
           <img src="../${esc(project.icon)}" alt="Ícone do projeto ${esc(project.name)}" width="360" height="360" />
